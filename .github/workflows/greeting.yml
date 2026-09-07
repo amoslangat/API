@@ -1,0 +1,46 @@
+name: Greetings
+
+on:
+  [pull_request_target, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+
+    permissions:
+      issues: write
+      pull-requests: write
+
+    steps:
+      - name: First Interaction Greeting
+        uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+          issue-message: >
+            👋 Hello and welcome to our project!
+
+            Thank you for opening your first issue. We appreciate you taking the time
+            to help improve this repository.
+
+            Our team will review your submission as soon as possible. In the meantime,
+            please ensure you've provided all relevant details, screenshots, logs, or
+            reproduction steps to help us investigate efficiently.
+
+            🚀 We value your contribution and look forward to collaborating with you!
+
+          pr-message: >
+            🎉 Thank you for your first Pull Request!
+
+            We’re excited to have you contributing to this project. Your effort helps
+            make the project better for everyone.
+
+            Before review, please ensure:
+            - ✅ Your changes are clearly described
+            - ✅ Relevant tests have been added or updated
+            - ✅ Documentation has been updated if necessary
+            - ✅ CI checks are passing
+
+            A maintainer will review your PR shortly and may provide feedback or request changes.
+
+            🌟 Thanks again for contributing and welcome to our community!
