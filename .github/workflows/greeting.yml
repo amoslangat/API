@@ -35,11 +35,7 @@ jobs:
             We’re excited to have you contributing to this project. Your effort helps
             make the project better for everyone.
 
-            Before review, please ensure:
-            - ✅ Your changes are clearly described
-            - ✅ Relevant tests have been added or updated
-            - ✅ Documentation has been updated if necessary
-            - ✅ CI checks are passing
+           
 
             A maintainer will review your PR shortly and may provide feedback or request changes.
 
